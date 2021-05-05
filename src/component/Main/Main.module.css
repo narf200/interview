@@ -1,0 +1,39 @@
+.mainItems {
+    height: 100%;
+    display: grid;
+    color: azure;
+    padding: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas:
+     "q"
+     "b"
+     "r";
+    background-image: url("https://images.wallpaperscraft.com/image/starry_sky_galaxy_space_130964_2560x1600.jpg");
+}
+
+.question {
+    grid-area: q;
+    text-align: center;
+    padding-top: 10px;
+    align-self: start;
+}
+
+.q1{
+    padding-top: 20px;
+}
+
+.button {
+    grid-area: b;
+    text-align: center;
+    height: 20px;
+}
+
+.result {
+    grid-area: r;
+    text-align: center;
+}
+
+.result img{
+    width: 600px;
+}
+

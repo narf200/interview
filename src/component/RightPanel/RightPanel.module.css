@@ -1,0 +1,13 @@
+.rightPanel{
+    grid-area: rp;
+    text-align: right;
+}
+
+.rightPanel img {
+    max-width: 200px;
+    min-width: 50px;
+}
+
+.firstPanel{
+    margin-bottom: -3px;
+}
