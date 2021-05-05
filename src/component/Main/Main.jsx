@@ -33,6 +33,8 @@ const Main = (props) => {
            case CATFUNNY:
                document.getElementById("catfanny").hidden = false;
                break;
+           default:
+               console.log("Hello cat")
        }
 
    }

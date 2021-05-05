@@ -1,13 +1,13 @@
 .app-wrapper {
   display: grid;
-  height: auto;
-  padding-bottom: 200px;
+  min-width: 1200px;
   grid-template-areas:
   "lp h rp"
   "lp c rp";
   grid-template-rows: 500px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   color: azure;
+  background-image: url("https://images.wallpaperscraft.com/image/starry_sky_galaxy_space_130964_2560x1600.jpg");
 }
 
 .app-wrapper-content {

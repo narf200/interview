@@ -21,7 +21,7 @@ let initialState = {
         },
         {
             "id": 4,
-            description: "Ты кот срун",
+            description: "Ты не Каджит! Ты кот срун",
             image: "https://krasivosti.pro/uploads/posts/2021-04/1617956772_29-p-kot-v-tualete-34.jpg"
         }
     ]
