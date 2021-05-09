@@ -4,8 +4,8 @@
   grid-template-areas:
   "lp h rp"
   "lp c rp";
-  grid-template-rows: 2fr 1fr;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 0.50fr 1fr;
+  grid-template-columns: 0.30fr 4fr 0.30fr;
   color: azure;
   background-image: url("https://images.wallpaperscraft.com/image/starry_sky_galaxy_space_130964_2560x1600.jpg");
 }

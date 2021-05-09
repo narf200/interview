@@ -3,7 +3,8 @@
     text-align: center;
     font-style: italic;
     color: bisque;
-    grid-template-rows: 30px 100px 350px 30px ;
+    grid-template-rows: 0.05fr 0.40fr 1fr 0.05fr ;
+    /*grid-template-rows: 30px 100px 350px 30px ;*/
     grid-template-areas:
         "ti"
         "ht"
@@ -14,16 +15,12 @@
 
 .headerText{
     grid-area: ht;
-    padding-bottom: 100px;
 }
 
 .catImage {
     grid-area: ci;
 }
 
-/*.headerItems img{*/
-/*    max-width: 900px;*/
-/*}*/
 
 .headerItems img{
     width: 100%;
@@ -35,6 +32,6 @@
     grid-area: ti;
 }
 
-.botomImage{
+.bottomImage{
     grid-area: bi;
 }

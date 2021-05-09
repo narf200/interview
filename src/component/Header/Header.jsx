@@ -16,7 +16,7 @@ const Header = (props) => {
             <div className={s.catImage}>
                 <img src={catImage} alt=""/>
             </div>
-            <div className={s.botomImage}>
+            <div className={s.bottomImage}>
                 <img src={topImage} alt=""/>
             </div>
         </div>

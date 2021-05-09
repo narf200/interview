@@ -25,6 +25,13 @@
     grid-area: b;
     text-align: center;
     height: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button button {
+    background-color: goldenrod;
+    border-radius: 30px;
 }
 
 .result {

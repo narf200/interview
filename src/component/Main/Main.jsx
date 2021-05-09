@@ -52,32 +52,32 @@ const Main = (props) => {
         <div className={s.mainItems}>
             <div className={s.question}>
                 <div className={s.q1}>
-                    Ты любишь золото ?
+                    <h3>Ты любишь золото ?</h3>
                     <input type="checkbox" onClick={increment}/> да
                     <input type="checkbox" onClick={decrement} /> нет
                 </div>
                 <div className={s.q1}>
-                    Хочешь красивые сапоги бесплатно ?
+                    <h3>Хочешь красивые сапоги бесплатно ?</h3>
                     <input type="checkbox" onClick={increment}/> да
                     <input type="checkbox" onClick={decrement} /> нет
                 </div>
                 <div className={s.q1}>
-                    Любишь странствовать на легке ?
+                    <h3>Любишь странствовать на легке ?</h3>
                     <input type="checkbox" onClick={increment}/> да
                     <input type="checkbox" onClick={decrement} /> нет
                 </div>
                 <div className={s.q1}>
-                    Часто гуляешь тёмной ночью ?
+                    <h3>Часто гуляешь тёмной ночью ?</h3>
                     <input type="checkbox" onClick={increment}/> да
                     <input type="checkbox" onClick={decrement} /> нет
                 </div>
                 <div className={s.q1}>
-                    Издали слышишь звон монет ?
+                    <h3>Издали слышишь звон монет ?</h3>
                     <input type="checkbox" onClick={increment}/> да
                     <input type="checkbox" onClick={decrement} /> нет
                 </div>
                 <div className={s.q1}>
-                    Возьмёшь что плохо лежит ?
+                    <h3>Возьмёшь что плохо лежит ?</h3>
                     <input type="checkbox" onClick={increment}/> да
                     <input type="checkbox" onClick={decrement} /> нет
                 </div>
@@ -85,7 +85,7 @@ const Main = (props) => {
 
             <div className={s.button}>
                 <button onClick={showResOnClick} >
-                    Узнать
+                    Узнать какой я Каджит
                 </button>
             </div>
 

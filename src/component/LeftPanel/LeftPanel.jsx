@@ -7,6 +7,7 @@ const LeftPanel = () => {
         <div className={s.leftPanel}>
             <img className={s.firstPanel} src={LeftPanelImage} alt=""/>
             <img src={LeftPanelImage} alt=""/>
+            <img src={LeftPanelImage} alt=""/>
         </div>
     )
 }
