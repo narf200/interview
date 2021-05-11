@@ -3,7 +3,7 @@ import s from "./Main.module.css"
 
 const Main = (props) => {
 
-    // console.log(props)
+     console.log(props)
 
     const [counter, setCounter] = useState(0)
 
@@ -38,6 +38,8 @@ const Main = (props) => {
        }
 
    }
+
+
 
     const increment = () => {
        return setCounter(counter + 1)

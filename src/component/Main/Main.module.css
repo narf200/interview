@@ -1,6 +1,6 @@
 .mainItems {
     display: grid;
-    color: azure;
+    color: bisque;
     padding: 5px;
     grid-row-gap: 5px;
     grid-template-areas:
