@@ -1,0 +1,62 @@
+{
+  "khajits": [
+    {
+      "id": 1,
+      "description": "Ты Каджит вор",
+      "image": "https://vignette.wikia.nocookie.net/elderscrolls/images/2/25/%D0%9A%D0%B0%D0%B4%D0%B6%D0%B8%D1%82_%28Skyrim%29.png/revision/latest/top-crop/width/220/height/220?cb=20120902010054&path-prefix=ru"
+    },
+    {
+      "id": 2,
+      "description": "Ты Каджит маг",
+      "image": "http://img0.joyreactor.cc/pics/post/full/Crazy-Laopi-artist-The-Elder-Scrolls-%D1%84%D1%8D%D0%BD%D0%B4%D0%BE%D0%BC%D1%8B-6361228.jpeg"
+    },
+    {
+      "id": 3,
+      "description": "Ты Каджит купец",
+      "image": "https://i.pinimg.com/originals/8d/9c/44/8d9c4437321deb527373d0d77a62ce98.jpg"
+    },
+    {
+      "id": 4,
+      "description": "Ты кот срун",
+      "image": "https://krasivosti.pro/uploads/posts/2021-04/1617956772_29-p-kot-v-tualete-34.jpg"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Ты любишь золото ?"
+    },
+    {
+      "id": 2,
+      "text": "Хочешь двемерские сапоги бесплатно ?"
+    },
+    {
+      "id": 3,
+      "text": "Любишь прокатиться на стилстрайдере ?"
+    },
+    {
+      "id": 4,
+      "text": "Часто гуляешь тёмной ночью ?"
+    },
+    {
+      "id": 5,
+      "text": "Издали слышишь звон монет ?"
+    },
+    {
+      "id": 6,
+      "text": "Возьмёшь что плохо лежит ?"
+    },
+    {
+      "id": 7,
+      "text": "В твоих венах течёт скума ? ?"
+    },
+    {
+      "id": 8,
+      "text": "Знаешь не по наслышке о лунном сахаре ?"
+    },
+    {
+      "id": 9,
+      "text": "У тебя всегда дыра в кармане ?"
+    }
+  ]
+}

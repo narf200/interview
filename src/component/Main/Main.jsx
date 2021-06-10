@@ -1,11 +1,43 @@
-import  React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import s from "./Main.module.css"
+import QuestionList from "../QuestionList/QuestionList";
+import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
 
 const Main = (props) => {
 
      console.log(props)
 
-    const [counter, setCounter] = useState(0)
+    const counter = useSelector(state => state.toolkit.counter)
+
+
+
+    // const [counter, setCounter] = useState(0)
+    const [questions, setQuestions] = useState(null)
+    const [khajits, setKhajits] = useState(null)
+    // const [isPending, setIsPending] = useState(true)
+
+    useEffect(()=> {
+        fetch(' http://localhost:8000/questions')
+            .then(res=> {
+              return  res.json()
+            }).then(data => {
+            setQuestions(data)
+        })
+    },[])
+
+    useEffect(()=> {
+        fetch(' http://localhost:8000/khajits')
+            .then(res=> {
+              return  res.json()
+            }).then(data => {
+            setKhajits(data)
+            console.log(data[0].description)
+        })
+    },[])
+
+
+
 
     const ROUGE = counter >= 5
     const WIZARD = counter >= 1 && counter <= 4
@@ -41,94 +73,70 @@ const Main = (props) => {
 
 
 
-    const increment = () => {
-       return setCounter(counter + 1)
-    }
-
-    const decrement = () => {
-           return setCounter(counter - 1)
-        }
-
-
     return (
         <div className={s.mainItems}>
-            <div className={s.question}>
-                <div className={s.q1}>
-                    <h3>Ты любишь золото ?</h3>
-                    <input type="checkbox" onClick={increment}/> да
-                    <input type="checkbox" onClick={decrement} /> нет
-                </div>
-                <div className={s.q1}>
-                    <h3>Хочешь красивые сапоги бесплатно ?</h3>
-                    <input type="checkbox" onClick={increment}/> да
-                    <input type="checkbox" onClick={decrement} /> нет
-                </div>
-                <div className={s.q1}>
-                    <h3>Любишь странствовать на легке ?</h3>
-                    <input type="checkbox" onClick={increment}/> да
-                    <input type="checkbox" onClick={decrement} /> нет
-                </div>
-                <div className={s.q1}>
-                    <h3>Часто гуляешь тёмной ночью ?</h3>
-                    <input type="checkbox" onClick={increment}/> да
-                    <input type="checkbox" onClick={decrement} /> нет
-                </div>
-                <div className={s.q1}>
-                    <h3>Издали слышишь звон монет ?</h3>
-                    <input type="checkbox" onClick={increment}/> да
-                    <input type="checkbox" onClick={decrement} /> нет
-                </div>
-                <div className={s.q1}>
-                    <h3>Возьмёшь что плохо лежит ?</h3>
-                    <input type="checkbox" onClick={increment}/> да
-                    <input type="checkbox" onClick={decrement} /> нет
-                </div>
-            </div>
+            {questions && <QuestionList questions={questions} />}
+
+            {/*<div className={s.link}>*/}
+            {/*    <Link to="/pollRezalt"><h2>Узнать какой я Каджит</h2></Link>*/}
+            {/*</div>*/}
 
             <div className={s.button}>
-                <button onClick={showResOnClick} >
-                    Узнать какой я Каджит
+                <button onClick={showResOnClick}>
+                    <h2>Узнать какой я Каджит</h2>
                 </button>
             </div>
 
-            <div className={s.result} >
-                <div id={"rouge"} hidden="true">
-                    <div>
-                    {props.listKhajit[0].description}
-                    </div>
-                    <div>
-                        <img src={props.listKhajit[0].image} alt=""/>
-                    </div>
-                </div>
 
-                <div id={"wizard"} hidden="true">
-                    <div>
-                        {props.listKhajit[1].description}
-                    </div>
-                    <div>
-                        <img src={props.listKhajit[1].image} alt=""/>
-                    </div>
-                </div>
+            {/*<div className={s.result} >*/}
+            {/*    {isPending && <div>Loading</div>}*/}
+            {/*</div>*/}
 
-                <div id={"merchant"} hidden="true">
-                    <div>
-                        {props.listKhajit[2].description}
+            <div>
+                {khajits && <div className={s.result} >
+                    <div id={"rouge"} hidden="true">
+                        <div>
+                            <h2>{khajits[0].description}</h2>
+                        </div>
+                        <div>
+                            <img src={khajits[0].image} alt=""/>
+                        </div>
                     </div>
-                    <div>
-                        <img src={props.listKhajit[2].image} alt=""/>
-                    </div>
-                </div>
 
-                <div id={"catfanny"} hidden="true">
-                    <div>
-                        {props.listKhajit[3].description}
+                    <div id={"wizard"} hidden="true">
+                        <div>
+                            <h2>{khajits[1].description}</h2>
+                        </div>
+                        <div>
+                            <img src={khajits[1].image} alt=""/>
+                        </div>
                     </div>
-                    <div>
-                        <img src={props.listKhajit[3].image} alt=""/>
-                    </div>
-                </div>
 
+                    <div id={"merchant"} hidden="true">
+                        <div>
+                            <h2>{khajits[2].description}</h2>
+                        </div>
+                        <div>
+                            <img src={khajits[2].image} alt=""/>
+                        </div>
+                    </div>
+
+                    <div id={"catfanny"} hidden="true">
+                        <div>
+                            <h2>{khajits[3].description}</h2>
+                        </div>
+                        <div>
+                            <img src={khajits[3].image} alt=""/>
+                        </div>
+                    </div>
+
+                </div>}
             </div>
+
+
+
+
+
         </div>
     )
 }
@@ -136,13 +144,7 @@ const Main = (props) => {
 export default Main
 
 
-// Вопросы
-// Любишь скуму ?
-// Тебе понраву езда на стилстрайдерах
-// про сыр или рыбу
-// тебя порицает общество
-// любишь носить одежду
-//У тебя всегда дыра в кармане
+
 
 // Сделать блоки в компанентах семантическими (навбар мейн и футер)
 
@@ -150,3 +152,7 @@ export default Main
 
 // сделать два окна 1 начальная страница
 // 2 страница с вопросами (модальное окно с результатом)
+
+
+// По состоянию нажатий формируем что отрисуется в компоненте.
+//     состояние == 7 рисуем такой-то

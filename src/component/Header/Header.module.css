@@ -3,17 +3,17 @@
     text-align: center;
     font-style: italic;
     color: bisque;
-    grid-template-rows: 0.05fr 0.40fr 1fr 0.05fr ;
-    /*grid-template-rows: 30px 100px 350px 30px ;*/
+    grid-template-rows: 0.05fr 0.40fr 1fr 3fr 0.05fr ;
     grid-template-areas:
         "ti"
         "ht"
         "ci"
+        "li"
         "bi";
     background-image: url("https://images.wallpaperscraft.com/image/starry_sky_galaxy_space_130964_2560x1600.jpg");
 }
 
-.headerText{
+.headerTitle{
     grid-area: ht;
 }
 
@@ -35,3 +35,14 @@
 .bottomImage{
     grid-area: bi;
 }
+
+.link {
+    margin-top: 90px;
+    grid-area: li;
+}
+
+.link a {
+    text-decoration: none;
+    color: bisque;
+}
+

@@ -1,5 +1,7 @@
 .leftPanel{
     grid-area: lp;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 .leftPanel img {

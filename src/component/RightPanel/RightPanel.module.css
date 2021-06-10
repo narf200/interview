@@ -1,6 +1,8 @@
 .rightPanel{
     grid-area: rp;
     text-align: right;
+    position: -webkit-sticky;
+    position: sticky;
 }
 
 .rightPanel img {

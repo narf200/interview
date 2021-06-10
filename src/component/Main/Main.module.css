@@ -29,6 +29,11 @@
     margin-bottom: 20px;
 }
 
+.link a {
+    text-decoration: none;
+    color: bisque;
+}
+
 .button button {
     background-color: goldenrod;
     border-radius: 30px;
@@ -37,9 +42,11 @@
 .result {
     grid-area: r;
     text-align: center;
+    margin-top: 40px;
 }
 
 .result img{
-    width: 600px;
+    width: 400px;
+    margin-top: 20px;
 }
 
