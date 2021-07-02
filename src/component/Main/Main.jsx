@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import s from "./Main.module.css"
 import QuestionList from "../QuestionList/QuestionList";
 import {Link} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
+import { useSelector} from "react-redux";
 
 const Main = (props) => {
 
