@@ -11,7 +11,6 @@ const Main = (props) => {
     const counter = useSelector(state => state.toolkit.counter)
 
 
-
     // const [counter, setCounter] = useState(0)
     const [questions, setQuestions] = useState(null)
     const [khajits, setKhajits] = useState(null)

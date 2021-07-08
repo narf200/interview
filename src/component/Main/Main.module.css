@@ -37,6 +37,33 @@
 .button button {
     background-color: goldenrod;
     border-radius: 30px;
+    padding: 10px 35px;
+    overflow:hidden;
+}
+
+.button button:hover {
+    background-color: #eac361;
+    border-radius: 30px;
+    border: solid 2px black;
+    left: 7px;
+    animation: bounce 1s;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    80% {
+        transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
 }
 
 .result {
